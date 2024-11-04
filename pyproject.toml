@@ -1,0 +1,36 @@
+[project]
+name = "yt-text-extractor"
+version = "0.1.0"
+description = "Extract on-screen text from Youtube videos"
+authors = [
+  { name="Alexander Ryabov", email="alex.ryabov@gmail.com" },
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "yt-dlp==2024.10.07",
+    "ConfigArgParse>=1.7",
+    "pytesseract>=0.3.13",
+    "pillow>=11.0.0",
+    "json-repair>=0.30.0",
+    "requests>=2.31.0",
+    "openai>=1.53.1",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0.0",
+]
+[project.scripts]
+yt-text-extractor= "yt_text_extractor:main"
+
+[tool.uv]
+package = true
+
+[project.urls]
+Homepage = "https://github.com/haron/yt-text-extractor"
+Issues = "https://github.com/haron/yt-text-extractor/issues"
